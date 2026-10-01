@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketplace-faq-handoff"
+version = "0.1.0"
+description = "Suggest seller FAQ entries from buyer order updates"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.110,<1", "httpx>=0.27,<1", "openai>=1.40,<2", "pydantic>=2.6,<3", "uvicorn>=0.29,<1"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+

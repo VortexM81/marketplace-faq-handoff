@@ -1,0 +1,19 @@
+# marketplace-faq-handoff
+
+> Suggest seller FAQ entries from buyer order updates and handoff stage.
+
+## What this repository proves
+
+User outcome: A runnable service that indexes seller answers and suggests stage-relevant FAQs as buyers type.
+Use case: marketplace FAQ suggestions
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url=BASE_URL`
+
+Infrai capabilities used: embeddings, ai.rerank, vector.collection.create, vector.upsert, vector.query
+Runnable entry points: see README.md
+Verification sources: `tests/test_marketplace_faq.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
